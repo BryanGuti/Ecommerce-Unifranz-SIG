@@ -1,0 +1,63 @@
+---
+import BaseHead from "../components/BaseHead.astro"
+import BaseHeader from "../components/BaseHeader.astro";
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <BaseHead title={title}/>
+</head>
+<body>
+    <div class="app">
+        <BaseHeader brandName="AndesLap" />
+        <slot/>
+    </div>
+</body>
+</html>
+
+<style is:global>
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0e172c;
+    --secondary-color: #3A7BD5;
+    --neutral-color: #F4F4F4;
+    --dark-color: #333333;
+    --success-color: #27AE60;
+    --danger-color: #E74C3C;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.app {
+    width: 100%;
+    max-width: 120rem;
+    padding-block-end: 8rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+</style>

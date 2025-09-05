@@ -1,0 +1,80 @@
+---
+const { brandName } = Astro.props
+---
+
+
+<header>
+    <div>
+        <a href="/">{ brandName }</a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/about">Sobre Nosotros</a></li>
+            <li><a href="/products">Planes</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<style>
+
+header {
+    position: sticky;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block-start: 4rem;
+}
+
+div {
+    transition-duration: .2s;
+}
+
+div > a {
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+div:hover{
+    scale: 1.1;
+}
+
+ul {
+    display: flex;
+    gap: 2rem;
+}
+
+li > a {
+    color: var(--neutral-color);
+    font-size: 2.4rem;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    background-color: #ffffff22;
+    border: .1rem solid var(--neutral-color);
+    border-radius: .5rem;
+    transition-duration: .2s;
+    box-shadow: 0rem 0rem 20rem var(--primary-color);
+}
+
+li {
+    transition-duration: .2s;
+
+}
+
+li:hover{
+    scale: 1.02;
+}
+
+li:hover > a {
+    background-color: var(--neutral-color);
+    color: var(--secondary-color);
+    border-color: transparent;
+}
+
+</style>
