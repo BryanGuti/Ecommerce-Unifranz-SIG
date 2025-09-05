@@ -1,0 +1,60 @@
+<section class="about-us">
+    <div class="image-wrapper">
+        <img src="images/team.jpg" alt="AndesLap Team">
+    </div>
+    <div class="text-wrapper">
+        <h2>¿Quiénes somos?</h2>
+        <p>Somos <em>AndesLap</em>, especialistas en el alto rendimiento y funcionamiento de laptops. Brindamos soporte predictivo y accesorios.<br/><br/>
+        Porque nos aseguramos que tu laptop funcione y rinda siempre al máximo.
+        </p>
+    </div>
+</section>
+
+<style>
+    .about-us {
+        width: 100%;
+        display: flex;
+        aspect-ratio: 16/9;
+        padding-block: 6rem;
+        justify-content: space-between;
+        border-bottom: .1rem solid var(--secondary-color);
+    }
+    
+    .image-wrapper {
+        width: 50rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+
+    .image-wrapper > img {
+        height: 100%;
+    }
+
+    .text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-width: 60rem;
+        gap: 10rem;
+    }
+    
+    .text-wrapper > h2 {
+        /* text-align: center; */
+        color: var(--secondary-color);
+        font-size: 5rem;
+    }
+
+    .text-wrapper > p {
+        color: var(--neutral-color);
+        font-size: 3rem;
+    }
+
+    p > em {
+        color: var(--secondary-color);
+    }
+
+</style>

@@ -1,0 +1,53 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section class="offer">
+    <h2>¿Qué ofrecemos?</h2>
+    <div class="cards">
+        <article class="card">
+            <span><Icon name="brain" width="100" height="100"/></span>
+            <p>Servicio Predictivo "LapCare"</p>
+        </article>
+        <article class="card">
+            <span><Icon name="tools" width="100" height="100"/></span>
+            <p>Accesorios y paquetes completos</p>
+        </article>
+        <article class="card">
+            <span><Icon name="laptop" width="100" height="100"/></span>
+            <p>Laptops de alto rendimiento</p>
+        </article>
+    </div>
+</section>
+
+<style>
+    .offer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
+        padding-block: 8rem;
+        align-items: center;
+        border-bottom: .1rem solid var(--secondary-color);
+    }
+
+    .offer > h2 {
+        color: var(--secondary-color);
+        font-size: 5rem;
+    }
+
+    .cards {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        color: var(--neutral-color);
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        font-size: 3rem;
+        text-align: center;
+    }
+</style>
