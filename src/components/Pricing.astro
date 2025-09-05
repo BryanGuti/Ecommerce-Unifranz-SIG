@@ -1,0 +1,140 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section class="pricing">
+    <article class="pricing-cards">
+        <h2 class="plan">LapCare Básico</h2>
+        <p class="price"><span>Bs. 30</span> /mes</p>
+        <ul class="details">
+                <li>Prevensión de fallos inesperados</li>
+                <li>Reportes mensuales</li>
+                <li>Generación de tickets</li>
+                <li>Compatible con todas las laptops</li>
+        </ul>
+        <button>Contratar Lapcare Basico</button>
+    </article>
+    <article class="pricing-cards">
+        <h2 class="plan">LapCare Pro</h2>
+        <p class="price"><span>Bs. 600</span> /año</p>
+        <ul class="details">
+                <li>Todo lo del plan básico</li>
+                <li>Canal de soporte prioritario</li>
+                <li>Auditoría técnica anual</li>
+                <li>Garantía hasta 3 años</li>
+        </ul>
+        <button>Contratar LapCare Pro</button>
+    </article>
+    <article class="pricing-cards">
+        <h2 class="plan">AndesPack Pro</h2>
+        <p class="price"><span>Bs. 1000</span> /año</p>
+        <ul class="details">
+                <li>Todo lo del plan básico</li>
+                <li>Configuración personalizado de laptop</li>
+                <li>Accesorios incluidos</li>
+                <li>Soporte y garantía personalizados</li>
+        </ul>
+        <button>Contratar AndesPack Pro</button>
+    </article>
+</section>
+<section class="payment">
+    <p>Usa el medio de pago que prefieras:</p>
+    <span>
+        <Icon name="mastercard"/>
+        <Icon name="paypal"/>
+        <Icon name="visa"/>
+        <Icon name="qr"/>
+    </span>
+</section>
+
+<style>
+    .pricing {
+        columns: 3;
+        padding-block-start: 7rem;
+        padding-block-end: 4rem;
+        gap: 3rem;
+    }
+
+    .pricing-cards {
+        width: 100%;
+        height: 47rem;
+        border: 0.2rem solid var(--neutral-color);
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 4rem;
+    }
+
+    .pricing-cards:hover {
+        background-color: #3a7bd511;
+    }
+
+    .plan {
+        font-size: 4rem;
+        text-align: center;
+        color: var(--neutral-color);
+    }
+
+    .pricing-cards > button {
+        font-size: 2rem;
+        width: 100%;
+        padding-block: 1rem;
+        border-radius: 0.5rem;
+        background-color: var(--secondary-color);
+        color: var(--neutral-color);
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+    }
+
+    .pricing-cards > button:hover {
+        background-color: var(--neutral-color);
+        color: var(--primary-color);
+    }
+
+    .price {
+        font-size: 3rem;
+        text-align: center;
+        color: var(--neutral-color);
+    }
+
+    .price > span {
+        color: var(--success-color);
+        font-weight: bold;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        font-size: 1.5rem;
+    }
+    
+    .details > li {
+        color: var(--neutral-color);
+    }
+    
+    .details > li::before {
+        content: "➤ ";
+        font-size: 2rem;
+        color: var(--secondary-color);
+    }
+
+    .payment {
+        display: flex;
+        width: 100%;
+        gap: 6rem;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: var(--secondary-color);
+    }
+
+    .payment > span {
+        display: inline-flex;
+        gap: 1rem;
+        font-size: 6rem;
+        color: var(--neutral-color);
+    }
+</style>
